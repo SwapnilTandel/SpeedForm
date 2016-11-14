@@ -46,77 +46,65 @@ window.onload = function () {
 
 
 
-  //      var minAspectRatio = 0.5;
-  //      var maxAspectRatio = 1.5;
+       var minAspectRatio = 0.5;
+       var maxAspectRatio = 1.5;
   cropper = new Cropper(image, {
     viewMode: 3,
-    dragMode: 'crop', //Change to move
-    checkCrossOrigin: false,
-    autoCrop:false, //Remove This
+    dragMode: 'move', //Change to move
+    // checkCrossOrigin: false,
+    // autoCrop:false, //Remove This
     zoomable: false,
 
     restore: false,
     guides: false,
     center: false,
     highlight: false,
-    cropBoxMovable: true, //Change to false
-    cropBoxResizable: true, //Change to false
+    cropBoxMovable: false, //Change to false
+    cropBoxResizable: false, //Change to false
     toggleDragModeOnDblclick: false,
 
     //                 aspectRatio: 16 / 9,
     //        autoCropArea: 0.65,
 
-    //        ready: function () {
-    //          var cropper = this.cropper;
-    //          var containerData = cropper.getContainerData();
-    //          var cropBoxData = cropper.getCropBoxData();
-    //          var aspectRatio = cropBoxData.width / cropBoxData.height;
-    //          var newCropBoxWidth;
-    //
-    //          if (aspectRatio < minAspectRatio || aspectRatio > maxAspectRatio) {
-    //            newCropBoxWidth = cropBoxData.height * ((minAspectRatio + maxAspectRatio) / 2);
-    //
-    //            cropper.setCropBoxData({
-    //              left: (containerData.width - newCropBoxWidth) / 2,
-    //              width: newCropBoxWidth
-    //            });
-    //          }
-    //        }
-    ////          ,
+           ready: function () {
+            //  var cropper = this.cropper;
+            //  var containerData = cropper.getContainerData();
+            //  var cropBoxData = cropper.getCropBoxData();
+            //  var aspectRatio = cropBoxData.width / cropBoxData.height;
+            //  var newCropBoxWidth;
+    
+            //  if (aspectRatio < minAspectRatio || aspectRatio > maxAspectRatio) {
+            //    newCropBoxWidth = cropBoxData.height * ((minAspectRatio + maxAspectRatio) / 2);
+    
+            //    cropper.setCropBoxData({
+            //      left: (containerData.width - newCropBoxWidth) / 2,
+            //      width: newCropBoxWidth
+            //    });
+            //  }
+            $( "#formnoTextBox" ).focus();
+           },
+    //          ,
     cropmove: function () {
       //          var cropper = this.cropper;
       // this.cropper.clear()
 
-      //          var cropBoxData = cropper.getCropBoxData();
-      //          var aspectRatio = cropBoxData.width / cropBoxData.height;
-      //
-      //          if (aspectRatio < minAspectRatio) {
-      //            cropper.setCropBoxData({
-      //              width: cropBoxData.height * minAspectRatio
-      //            });
-      //          } else if (aspectRatio > maxAspectRatio) {
-      //            cropper.setCropBoxData({
-      //              width: cropBoxData.height * maxAspectRatio
-      //            });
-      //          }
+              //  var cropBoxData = cropper.getCropBoxData();
+              //  var aspectRatio = cropBoxData.width / cropBoxData.height;
+      
+              //  if (aspectRatio < minAspectRatio) {
+              //    cropper.setCropBoxData({
+              //      width: cropBoxData.height * minAspectRatio
+              //    });
+              //  } else if (aspectRatio > maxAspectRatio) {
+              //    cropper.setCropBoxData({
+              //      width: cropBoxData.height * maxAspectRatio
+              //    });
+              //  }
+
       console.log(this.cropper.getCropBoxData());
     }
   });
 
-  //        cropper.clear();
-  //        console.log(cropper.getCropBoxData());
-  cropper.setCropBoxData({ "left": 242.5, "top": 98, "width": 500, "height": 183.9375 });
-  //        cropper.setDragMode('move');
-
-
-  // function setHighlight(x, y) {
-  //     x.style.background = "yellow";
-  //     cropper.setCropBoxData({"left":100,"top":200,"width":100,"height":300});
-  // }
-
-  // document.getElementById("textboxOne").addEventListener("onfocus", function(){
-  //     document.getElementById("textboxOne").style.background = "yellow";
-  // });
 
   $(".positive-integer").numeric(
     { decimal: false, negative: false },
@@ -149,16 +137,24 @@ $("#messageBox").html("<strong>Info!</strong> Indicates a neutral informative ch
 };
 
 $( document ).ready(function() {
-$( "#patientnameTextBox" ).focus(function() {
-  cropper.moveTo(-400);
-  cropper.setCropBoxData({left: 527, top: 64, width: 616, height: 115});
+
+  shortcut("Ctrl+Up",function() {
+  cropper.move(0,-10);
 });
+  shortcut("Ctrl+Down",function() {
+  cropper.move(0,10);
 });
 
-document.getElementById("patientnameTextBox").addEventListener("click", function(){
-  // document.getElementById("textboxOne").style.background = "yellow";
+$( "#formnoTextBox" ).focus(function() {
+  cropper.setDragMode("crop");
+  cropper.moveTo(-240);
+  cropper.setCropBoxData({left: 274, top: 134, width: 1321, height: 141});
+});
+$( "#patientnameTextBox" ).focus(function() {
+  cropper.setDragMode("crop");
   cropper.moveTo(-400);
   cropper.setCropBoxData({left: 527, top: 64, width: 616, height: 115});
+});
 });
 
 function setHighlight(x, y) {

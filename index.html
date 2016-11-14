@@ -19,7 +19,14 @@
     <link href="css/cropper.css" rel="stylesheet">
     <script type="text/javascript" src="js/cropper.js"></script>
     <script type="text/javascript" src="js/jquery.numeric.min.js"></script>
+    <script src="js/shortcuts_v1.js"></script>
     <script src="js/main.js"></script>
+    <style>
+    .ownAdjustment{
+    padding-right: 5px !important;
+    padding-left: 2px !important;
+    }
+    </style>
 </head>
 
 <body>
@@ -42,19 +49,19 @@
         <form class="form-inline">
             <!--Input Row 1-->
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <div class="form-group pull-right">
                         <label for="formnoTextBox">Form No:</label>
                         <input type="text" id="formnoTextBox" name="formnoTextBox" class="form-control" tabindex="1">
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <div class="form-group pull-right">
                         <label for="religionTextBox">Religion:</label>
                         <input type="text" id="religionTextBox" name="religionTextBox" class="form-control" tabindex="7">
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <div class="form-group pull-right">
                         <label for="knownillnessTextBox">Known Illness:</label>
                         <select class="form-control" id="knownillnessTextBox" name="knownillnessSelect" tabindex="13">
@@ -65,7 +72,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <div class="form-group pull-right">
                         <label for="bpsysTextBox">BP Sys:</label>
                         <input type="text" id="bpsysTextBox" name="bpsysTextBox" class="form-control positive-integer" tabindex="19">
@@ -75,13 +82,13 @@
 
             <!--Input Row 2-->
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <div class="form-group pull-right">
                         <label for="patientnameTextBox">Patient Name:</label>
                         <input type="text" id="patientnameTextBox" name="patientnameTextBox" class="form-control" tabindex="2">
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <div class="form-group pull-right">
                         <label for="vegnonvegSelect">Veg/Non-Veg :</label>
                         <select class="form-control" id="vegnonvegSelect" name="vegnonvegSelect" tabindex="8">
@@ -90,7 +97,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <div class="form-group pull-right">
                         <label for="diabetesSelect">Diabetes:</label>
                         <select class="form-control" id="diabetesSelect" name="diabetesSelect" tabindex="14">
@@ -99,7 +106,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <div class="form-group pull-right">
                         <label for="bbdiaTextBox">BB Dia:</label>
                         <input type="text" id="bbdiaTextBox" name="bbdiaTextBox" class="form-control positive-integer" tabindex="20">
@@ -109,27 +116,27 @@
 
             <!--Input Row 3-->
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <div class="form-group pull-right">
                         <label for="ageTextBox">Age:</label>
                         <input type="text" id="ageTextBox" name="ageTextBox" class="form-control positive-integer" tabindex="3" maxlength="2">
                     </div>
 
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <div class="form-group pull-right">
                         <label for="weightTextBox">Weight:</label>
                         <input type="text" id="weightTextBox" name="weightTextBox" class="form-control positive-integer" tabindex="9" maxlength="3">
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <div class="form-group pull-right">
                         <label for="noofyearsTextBox">No Of Years:</label>
                         <input type="text" id="noofyearsTextBox" name="noofyearsTextBox" class="form-control positive-integer" id="" maxlength="2"
                             tabindex="15">
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <div class="form-group pull-right">
                         <label for="worktypeSelect">Work Type:</label>
                         <select class="form-control" id="worktypeSelect" name="worktypeSelect" tabindex="21">
@@ -142,7 +149,7 @@
 
             <!--Input Row 4-->
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <div class="form-group pull-right">
                         <label for="sexSelect">Sex:</label>
                         <select class="form-control" id="sexSelect" name="sexSelect" tabindex="4">
@@ -151,13 +158,13 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <div class="form-group pull-right">
                         <label for="heightTextBox">Height:</label>
                         <input type="text" id="heightTextBox" name="heightTextBox" class="form-control numeric" tabindex="10" maxlength="3">
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <div class="form-group pull-right">
                         <label for="familyhistorySelect">Family History:</label>
                         <select class="form-control" id="familyhistorySelect" name="familyhistorySelect" tabindex="16">
@@ -167,7 +174,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <div class="form-group pull-right">
                         <label for="remarksTextBox">Remarks:</label>
                         <input type="text" id="remarksTextBox" name="remarksTextBox" class="form-control" tabindex="22">
@@ -176,19 +183,19 @@
             </div>
             <!--Input Row 5-->
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <div class="form-group pull-right">
                         <label for="phonenoTextBox">Phone No:</label>
                         <input type="text" id="phonenoTextBox" name="phonenoTextBox" class="form-control positive-integer" tabindex="5" maxlength="10">
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <div class="form-group pull-right">
                         <label for="waistTextBox">Waist:</label>
                         <input type="text" id="waistTextBox" name="waistTextBox" class="form-control positive-integer" tabindex="11" maxlength="3">
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <div class="form-group pull-right">
                         <label for="medicationSelect">Medication:</label>
                         <select class="form-control" id="medicationSelect" name="medicationSelect" tabindex="17">
@@ -197,7 +204,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <!--<div class="form-group pull-right">
                         <label for="usr">Name:</label>
                         <input type="text" class="form-control">
@@ -206,25 +213,25 @@
             </div>
             <!--Input Row 6-->
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <div class="form-group pull-right">
                         <label for="emailTextBox">Email ID:</label>
                         <input type="text" id="emailTextBox" name="emailTextBox" class="form-control" tabindex="6">
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <div class="form-group pull-right">
                         <label for="hipTextBox">Hip:</label>
                         <input type="text" id="hipTextBox" name="hipTextBox" class="form-control positive-integer" tabindex="12" maxlength="3">
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <div class="form-group pull-right">
                         <label for="randomgbTextBox">Random BG:</label>
                         <input type="text" id="randomgbTextBox" name="randomgbTextBox" class="form-control positive-integer" id="" tabindex="18">
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 ownAdjustment">
                     <!--<div class="form-group pull-right">
                         <label for="usr">Name:</label>
                         <input type="text" class="form-control">
