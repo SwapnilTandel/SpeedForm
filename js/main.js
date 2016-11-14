@@ -50,17 +50,17 @@ window.onload = function () {
   //      var maxAspectRatio = 1.5;
   cropper = new Cropper(image, {
     viewMode: 3,
-    dragMode: 'move',
+    dragMode: 'crop', //Change to move
     checkCrossOrigin: false,
-    //          autoCrop:false,
+    autoCrop:false, //Remove This
     zoomable: false,
 
     restore: false,
     guides: false,
     center: false,
     highlight: false,
-    cropBoxMovable: false,
-    cropBoxResizable: false,
+    cropBoxMovable: true, //Change to false
+    cropBoxResizable: true, //Change to false
     toggleDragModeOnDblclick: false,
 
     //                 aspectRatio: 16 / 9,
@@ -85,7 +85,7 @@ window.onload = function () {
     ////          ,
     cropmove: function () {
       //          var cropper = this.cropper;
-      this.cropper.clear()
+      // this.cropper.clear()
 
       //          var cropBoxData = cropper.getCropBoxData();
       //          var aspectRatio = cropBoxData.width / cropBoxData.height;
@@ -99,6 +99,7 @@ window.onload = function () {
       //              width: cropBoxData.height * maxAspectRatio
       //            });
       //          }
+      console.log(this.cropper.getCropBoxData());
     }
   });
 
@@ -130,24 +131,16 @@ $("#messageBox").html("<strong>Info!</strong> Indicates a neutral informative ch
       $(this).parent().addClass("has-error");
       event.preventDefault();
       $(this).focus()
-      // event.stopPropagation();
-      // event.stopImmediatePropagation();
     } else {
       if (validateEmail(sEmail)) {
         $(this).parent().removeClass("has-error");
         clearError();
-        // alert('Email is valid');
-        // $('#textboxEmail').addClass("has-error");
       }
       else {
         postError('error', 'Invalid Email Address');
-        // alert('Invalid Email Address');
-        // $('#textboxEmail').addClass("has-error");
         $(this).parent().addClass("has-error");
         event.preventDefault();
         $(this).focus()
-              // event.stopPropagation();
-      // event.stopImmediatePropagation();
       }
     }
 
@@ -155,7 +148,20 @@ $("#messageBox").html("<strong>Info!</strong> Indicates a neutral informative ch
 
 };
 
+$( document ).ready(function() {
+$( "#patientnameTextBox" ).focus(function() {
+  cropper.moveTo(-400);
+  cropper.setCropBoxData({left: 527, top: 64, width: 616, height: 115});
+});
+});
+
+document.getElementById("patientnameTextBox").addEventListener("click", function(){
+  // document.getElementById("textboxOne").style.background = "yellow";
+  cropper.moveTo(-400);
+  cropper.setCropBoxData({left: 527, top: 64, width: 616, height: 115});
+});
+
 function setHighlight(x, y) {
   x.style.background = "yellow";
   cropper.setCropBoxData({ "left": 100, "top": 200, "width": 100, "height": 300 });
-}
+};

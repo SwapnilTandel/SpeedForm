@@ -37,25 +37,27 @@
             <span id="messageBox"><strong>Info!</strong> Indicates a neutral informative change or action.</span>
         </div>
 
+<div class="panel panel-default">
+  <div class="panel-body">
         <form class="form-inline">
             <!--Input Row 1-->
             <div class="row">
                 <div class="col-lg-3">
                     <div class="form-group pull-right">
-                        <label for="usr">Form No:</label>
-                        <input type="text" id="Form No" class="form-control" tabindex="1">
+                        <label for="formnoTextBox">Form No:</label>
+                        <input type="text" id="formnoTextBox" name="formnoTextBox" class="form-control" tabindex="1">
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="form-group pull-right">
-                        <label for="usr">Religion:</label>
-                        <input type="text" class="form-control" tabindex="7">
+                        <label for="religionTextBox">Religion:</label>
+                        <input type="text" id="religionTextBox" name="religionTextBox" class="form-control" tabindex="7">
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="form-group pull-right">
-                        <label for="usr">Known Illness:</label>
-                        <select class="form-control" id="Known_Illness" tabindex="13">
+                        <label for="knownillnessTextBox">Known Illness:</label>
+                        <select class="form-control" id="knownillnessTextBox" name="knownillnessSelect" tabindex="13">
                             <option value="Heart (H)">Heart (H)</option>
                             <option value="Kidney (K)">Kidney (K)</option>
                             <option value="Diabetes (H)">Diabetes (H)</option>
@@ -65,8 +67,8 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="form-group pull-right">
-                        <label for="usr">BP Sys:</label>
-                        <input type="text" class="form-control positive-integer" tabindex="19">
+                        <label for="bpsysTextBox">BP Sys:</label>
+                        <input type="text" id="bpsysTextBox" name="bpsysTextBox" class="form-control positive-integer" tabindex="19">
                     </div>
                 </div>
             </div>
@@ -75,14 +77,14 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="form-group pull-right">
-                        <label for="usr">Patient Name:</label>
-                        <input type="text" class="form-control" tabindex="2">
+                        <label for="patientnameTextBox">Patient Name:</label>
+                        <input type="text" id="patientnameTextBox" name="patientnameTextBox" class="form-control" tabindex="2">
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="form-group pull-right">
-                        <label for="usr">Veg/Non-Veg :</label>
-                        <select class="form-control" id="sel1" tabindex="8">
+                        <label for="vegnonvegSelect">Veg/Non-Veg :</label>
+                        <select class="form-control" id="vegnonvegSelect" name="vegnonvegSelect" tabindex="8">
                             <option value="Veg">Veg</option>
                             <option value="Non-Veg">Non-Veg</option>
                         </select>
@@ -90,8 +92,8 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="form-group pull-right">
-                        <label for="usr">Diabetes:</label>
-                        <select class="form-control" id="Known_Illness" tabindex="14">
+                        <label for="diabetesSelect">Diabetes:</label>
+                        <select class="form-control" id="diabetesSelect" name="diabetesSelect" tabindex="14">
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
@@ -99,8 +101,8 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="form-group pull-right">
-                        <label for="usr">BB Dia:</label>
-                        <input type="text" class="form-control positive-integer" tabindex="20">
+                        <label for="bbdiaTextBox">BB Dia:</label>
+                        <input type="text" id="bbdiaTextBox" name="bbdiaTextBox" class="form-control positive-integer" tabindex="20">
                     </div>
                 </div>
             </div>
@@ -109,33 +111,31 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="form-group pull-right">
-                        <label for="usr">Age:</label>
-                        <input type="text" class="form-control positive-integer" tabindex="3" maxlength="2">
+                        <label for="ageTextBox">Age:</label>
+                        <input type="text" id="ageTextBox" name="ageTextBox" class="form-control positive-integer" tabindex="3" maxlength="2">
                     </div>
 
                 </div>
                 <div class="col-lg-3">
                     <div class="form-group pull-right">
-                        <label for="usr">Weight:</label>
-                        <input type="text" class="form-control positive-integer" tabindex="9" maxlength="3">
+                        <label for="weightTextBox">Weight:</label>
+                        <input type="text" id="weightTextBox" name="weightTextBox" class="form-control positive-integer" tabindex="9" maxlength="3">
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="form-group pull-right">
-                        <label for="usr">No Of Years:</label>
-                        <input type="text" class="form-control positive-integer" id="" maxlength="2" tabindex="15">
+                        <label for="noofyearsTextBox">No Of Years:</label>
+                        <input type="text" id="noofyearsTextBox" name="noofyearsTextBox" class="form-control positive-integer" id="" maxlength="2"
+                            tabindex="15">
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="form-group pull-right">
-                        <label for="usr">Work Type:</label>
-                        <!--<input type="text" class="form-control" tabindex="21">-->
-
-                        <select class="form-control" id="" tabindex="21">
+                        <label for="worktypeSelect">Work Type:</label>
+                        <select class="form-control" id="worktypeSelect" name="worktypeSelect" tabindex="21">
                             <option value="Desk Job (DJ)">Desk Job (DJ)</option>
                             <option value="Non-Desk Job (NDJ)">Non-Desk Job (NDJ)</option>
                         </select>
-
                     </div>
                 </div>
             </div>
@@ -144,8 +144,8 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="form-group pull-right">
-                        <label for="usr">Sex:</label>
-                        <select class="form-control" id="sel1" tabindex="4">
+                        <label for="sexSelect">Sex:</label>
+                        <select class="form-control" id="sexSelect" name="sexSelect" tabindex="4">
                             <option value="M">M</option>
                             <option value="F">F</option>
                         </select>
@@ -153,14 +153,14 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="form-group pull-right">
-                        <label for="usr">Height:</label>
-                        <input type="text" class="form-control numeric" tabindex="10" maxlength="3">
+                        <label for="heightTextBox">Height:</label>
+                        <input type="text" id="heightTextBox" name="heightTextBox" class="form-control numeric" tabindex="10" maxlength="3">
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="form-group pull-right">
-                        <label for="usr">Family History:</label>
-                        <select class="form-control" id="sel2" tabindex="16">
+                        <label for="familyhistorySelect">Family History:</label>
+                        <select class="form-control" id="familyhistorySelect" name="familyhistorySelect" tabindex="16">
                             <option value="Father (F)">Father (F)</option>
                             <option value="Mother (M)">Mother (M)</option>
                             <option value="Sibling (Sb)">Sibling (Sb)</option>
@@ -169,8 +169,8 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="form-group pull-right">
-                        <label for="usr">Remarks:</label>
-                        <input type="text" class="form-control" tabindex="22">
+                        <label for="remarksTextBox">Remarks:</label>
+                        <input type="text" id="remarksTextBox" name="remarksTextBox" class="form-control" tabindex="22">
                     </div>
                 </div>
             </div>
@@ -178,20 +178,20 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="form-group pull-right">
-                        <label for="usr">Phone No:</label>
-                        <input type="text" class="form-control positive-integer" tabindex="5" maxlength="10">
+                        <label for="phonenoTextBox">Phone No:</label>
+                        <input type="text" id="phonenoTextBox" name="phonenoTextBox" class="form-control positive-integer" tabindex="5" maxlength="10">
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="form-group pull-right">
-                        <label for="usr">Waist:</label>
-                        <input type="text" class="form-control positive-integer" tabindex="11" maxlength="3">
+                        <label for="waistTextBox">Waist:</label>
+                        <input type="text" id="waistTextBox" name="waistTextBox" class="form-control positive-integer" tabindex="11" maxlength="3">
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="form-group pull-right">
-                        <label for="usr">Medication:</label>
-                        <select class="form-control" id="medicationTextBox" tabindex="17">
+                        <label for="medicationSelect">Medication:</label>
+                        <select class="form-control" id="medicationSelect" name="medicationSelect" tabindex="17">
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
@@ -208,20 +208,20 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="form-group pull-right">
-                        <label for="usr">Email ID:</label>
-                        <input type="text" id="textboxEmail" class="form-control" tabindex="6">
+                        <label for="emailTextBox">Email ID:</label>
+                        <input type="text" id="emailTextBox" name="emailTextBox" class="form-control" tabindex="6">
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="form-group pull-right">
-                        <label for="usr">Hip:</label>
-                        <input type="text" class="form-control positive-integer" tabindex="12" maxlength="3">
+                        <label for="hipTextBox">Hip:</label>
+                        <input type="text" id="hipTextBox" name="hipTextBox" class="form-control positive-integer" tabindex="12" maxlength="3">
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="form-group pull-right">
-                        <label for="usr">Random BG:</label>
-                        <input type="text" class="form-control positive-integer" id="" tabindex="18">
+                        <label for="randomgbTextBox">Random BG:</label>
+                        <input type="text" id="randomgbTextBox" name="randomgbTextBox" class="form-control positive-integer" id="" tabindex="18">
                     </div>
                 </div>
                 <div class="col-lg-3">
@@ -232,6 +232,9 @@
                 </div>
             </div>
         </form>
+        </div>
+</div>
     </div>
 </body>
+
 </html>
