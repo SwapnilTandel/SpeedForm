@@ -85,8 +85,8 @@ window.onload = function () {
            },
     //          ,
     cropmove: function () {
-      //          var cropper = this.cropper;
-      // this.cropper.clear()
+               var cropper = this.cropper;
+      this.cropper.clear()
 
               //  var cropBoxData = cropper.getCropBoxData();
               //  var aspectRatio = cropBoxData.width / cropBoxData.height;
@@ -134,6 +134,16 @@ $("#messageBox").html("<strong>Info!</strong> Indicates a neutral informative ch
 
   });
 
+
+	setTimeout(function() {
+
+		// preload image
+		new Image().src = "http://www.attainmentcompany.com/sites/default/files/images/OrderForm-Image.jpg";
+    new Image().src = "http://www.hotdreamweaver.com/UserFiles/Image/form-to-database.jpg";
+
+	}, 1000);
+
+
 };
 
 $( document ).ready(function() {
@@ -146,12 +156,14 @@ $( document ).ready(function() {
 });
 
 $( "#formnoTextBox" ).focus(function() {
-  cropper.setDragMode("crop");
+  cropper.crop();
+  // cropper.setDragMode("crop");
   cropper.moveTo(-240);
   cropper.setCropBoxData({left: 274, top: 134, width: 1321, height: 141});
 });
 $( "#patientnameTextBox" ).focus(function() {
-  cropper.setDragMode("crop");
+  // cropper.setDragMode("crop");
+  cropper.crop();
   cropper.moveTo(-400);
   cropper.setCropBoxData({left: 527, top: 64, width: 616, height: 115});
 });
