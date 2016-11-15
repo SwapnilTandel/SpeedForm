@@ -43,7 +43,7 @@
             <div class="col-lg-12">
                 <div style="max-width: 100%;">
                     <div style="width: 100%; margin-bottom: 5px;">
-                        <img id="image" style="max-width: 100%; height:300px;" src="img/img3.jpg" alt="Picture">
+                        <img id="image" style="max-width: 100%; height:300px;" src="img/img1.jpeg" alt="Picture">
                     </div>
                 </div>
             </div>
